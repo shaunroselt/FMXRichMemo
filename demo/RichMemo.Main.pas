@@ -22,6 +22,8 @@ type
     MemoMD: TMemo;
     TabItemPython: TTabItem;
     MemoPython: TMemo;
+    TabItemHTML: TTabItem;
+    MemoHTML: TMemo;
     procedure MemoPascalPresentationNameChoosing(Sender: TObject; var PresenterName: string);
     procedure FormCreate(Sender: TObject);
   private
@@ -53,6 +55,7 @@ begin
   MemoSQL.ScrollAnimation := TBehaviorBoolean.True;
   MemoMD.ScrollAnimation := TBehaviorBoolean.True;
   MemoPython.ScrollAnimation := TBehaviorBoolean.True;
+  MemoHTML.ScrollAnimation := TBehaviorBoolean.True;
 
   // Setting the default syntax and fonts
   if MemoPascal.Presentation is TRichEditStyled then
@@ -69,6 +72,9 @@ begin
 
   if MemoPython.Presentation is TRichEditStyled then
     TRichEditStyled(MemoPython.Presentation).SetCodeSyntaxName('python', MemoPython.Font, MemoPython.FontColor);
+
+  if MemoHTML.Presentation is TRichEditStyled then
+    TRichEditStyled(MemoHTML.Presentation).SetCodeSyntaxName('html', MemoHTML.Font, MemoHTML.FontColor);
 end;
 
 end.
