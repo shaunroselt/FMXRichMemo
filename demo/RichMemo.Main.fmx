@@ -22,10 +22,12 @@ object FormMain: TFormMain
     Size.Height = 659.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 48.000000000000000000
-    TabIndex = 0
+    TabIndex = 5
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
+      955s
+      611s
       955s
       611s
       955s
@@ -40,8 +42,7 @@ object FormMain: TFormMain
       CustomIcon = <
         item
         end>
-      TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 59.000000000000000000
       Size.Height = 48.000000000000000000
       Size.PlatformDefault = False
@@ -254,7 +255,6 @@ object FormMain: TFormMain
       CustomIcon = <
         item
         end>
-      TextSettings.Trimming = None
       IsSelected = False
       Size.Width = 55.000000000000000000
       Size.Height = 48.000000000000000000
@@ -471,7 +471,6 @@ object FormMain: TFormMain
       CustomIcon = <
         item
         end>
-      TextSettings.Trimming = None
       IsSelected = False
       Size.Width = 46.000000000000000000
       Size.Height = 48.000000000000000000
@@ -508,7 +507,6 @@ object FormMain: TFormMain
       CustomIcon = <
         item
         end>
-      TextSettings.Trimming = None
       IsSelected = False
       Size.Width = 65.000000000000000000
       Size.Height = 48.000000000000000000
@@ -568,7 +566,6 @@ object FormMain: TFormMain
       CustomIcon = <
         item
         end>
-      TextSettings.Trimming = None
       IsSelected = False
       Size.Width = 168.000000000000000000
       Size.Height = 48.000000000000000000
@@ -879,6 +876,181 @@ object FormMain: TFormMain
         OnPresentationNameChoosing = MemoPascalPresentationNameChoosing
         Viewport.Width = 925.000000000000000000
         Viewport.Height = 587.000000000000000000
+      end
+    end
+    object TabItemHTML: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 58.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'HTML'
+      object MemoHTML: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        CheckSpelling = True
+        DataDetectorTypes = []
+        Lines.Strings = (
+          '<!doctype html>'
+          '<html lang="en">'
+          '<head>'
+          '  <meta charset="utf-8">'
+          
+            '  <meta name="viewport" content="width=device-width, initial-sca' +
+            'le=1">'
+          '  <title>FMXRichMemo HTML Demo</title>'
+          '  <!-- Comment: tags, attrs, strings, entities -->'
+          '</head>'
+          
+            '<body class="app theme-dark" data-app="FMXRichMemo" aria-label="' +
+            'Demo page">'
+          '  <header id="top" class="header">'
+          '    <h1>HTML Syntax Highlighting Demo</h1>'
+          '    <p>'
+          
+            '      Entities: &amp; &lt; &gt; &quot; &apos; &nbsp; &copy; &reg' +
+            '; &mdash;'
+          '    </p>'
+          
+            '    <!-- A comment with <tags attr="value"> inside should still ' +
+            'be comment -->'
+          '  </header>'
+          ''
+          '  <nav class="nav" role="navigation" aria-label="Primary">'
+          '    <a href="#section-forms" class="link">Forms</a>'
+          '    <a href="#section-media" class="link">Media</a>'
+          '    <a href="#section-tables" class="link">Tables</a>'
+          '    <a href="#section-misc" class="link">Misc</a>'
+          '  </nav>'
+          ''
+          '  <main class="content">'
+          '    <section id="section-forms" class="card" data-kind='#39'demo'#39'>'
+          '      <h2>Forms</h2>'
+          '      <form action="/submit" method="post" autocomplete="on">'
+          '        <label for="name">Name:</label>'
+          
+            '        <input id="name" name="name" type="text" value="Ada Love' +
+            'lace" required>'
+          ''
+          '        <label for="email">Email:</label>'
+          
+            '        <input id="email" name="email" type="email" value="ada@e' +
+            'xample.com">'
+          ''
+          '        <label for="role">Role:</label>'
+          '        <select id="role" name="role">'
+          '          <option value="dev">Developer</option>'
+          '          <option value="qa" selected>QA</option>'
+          '          <option value="pm">PM</option>'
+          '        </select>'
+          ''
+          '        <label>'
+          '          <input type="checkbox" checked> Subscribe'
+          '        </label>'
+          ''
+          
+            '        <button type="submit" class="btn" data-action=save>Save<' +
+            '/button>'
+          
+            '        <button type="button" class="btn btn-secondary" disabled' +
+            '="disabled">Disabled</button>'
+          '      </form>'
+          '    </section>'
+          ''
+          '    <section id="section-media" class="card">'
+          '      <h2>Media</h2>'
+          ''
+          '      <figure class="figure">'
+          
+            '        <img src="preview.png" alt="Preview image" width="320" h' +
+            'eight="180">'
+          
+            '        <figcaption>Image with attributes and quoted strings.</f' +
+            'igcaption>'
+          '      </figure>'
+          ''
+          '      <p>'
+          
+            '        Inline code-ish text: <span class="code" data-x="1" data' +
+            '-y="2">x = y &amp;&amp; z</span>'
+          '      </p>'
+          ''
+          
+            '      <div class="box" style="padding: 8px; border: 1px solid #c' +
+            'cc;">'
+          '        <p>Style attribute: <strong>quoted</strong> values.</p>'
+          '      </div>'
+          '    </section>'
+          ''
+          '    <section id="section-tables" class="card">'
+          '      <h2>Tables</h2>'
+          '      <table class="table" aria-describedby="table-desc">'
+          '        <caption id="table-desc">Simple table</caption>'
+          '        <thead>'
+          '          <tr>'
+          '            <th scope="col">Key</th>'
+          '            <th scope="col">Value</th>'
+          '          </tr>'
+          '        </thead>'
+          '        <tbody>'
+          '          <tr>'
+          '            <td>language</td>'
+          '            <td>html</td>'
+          '          </tr>'
+          '          <tr>'
+          '            <td>file</td>'
+          '            <td>demo.htm</td>'
+          '          </tr>'
+          '        </tbody>'
+          '      </table>'
+          '    </section>'
+          ''
+          '    <section id="section-misc" class="card">'
+          '      <h2>Misc</h2>'
+          ''
+          '      <p>'
+          '        Self-closing-ish tags: <br> <hr>'
+          '      </p>'
+          ''
+          '      <p>'
+          '        Nested tags:'
+          '        <span class="outer" data-info="A &amp; B">'
+          '          outer <em class="inner">inner</em> outer'
+          '        </span>'
+          '      </p>'
+          ''
+          '      <p>'
+          
+            '        Unquoted attrs (still valid-ish in HTML): <input type=te' +
+            'xt value=unquoted data-flag=true>'
+          '      </p>'
+          ''
+          
+            '      <!-- <div class="not-real">This is inside a comment</div> ' +
+            '-->'
+          '    </section>'
+          '  </main>'
+          ''
+          '  <footer class="footer">'
+          '    <p>End of demo '#8212' jump to <a href="#top">top</a>.</p>'
+          '  </footer>'
+          '</body>'
+          '</html>')
+        StyledSettings = [Style, FontColor]
+        TextSettings.Font.Family = 'Consolas'
+        TextSettings.Font.Size = 14.000000000000000000
+        Align = Client
+        Size.Width = 955.000000000000000000
+        Size.Height = 611.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'memostyle_clear'
+        TabOrder = 0
+        OnPresentationNameChoosing = MemoPascalPresentationNameChoosing
+        Viewport.Width = 925.000000000000000000
+        Viewport.Height = 599.000000000000000000
       end
     end
   end
